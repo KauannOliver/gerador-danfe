@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nota Fiscal Eletrônica (DANFE)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            width: 800px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+        }
+
+        .content {
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .logo {
+            max-width: 150px;
+        }
+
+        .info-box {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .center{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .print-button {
+        background-color: #000000;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 8px;
+        }
+
+        .print-button:hover {
+            background-color: #4a4a4a; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://www1.sp.senac.br/hotsites/sites/guiavisual/wp-content/uploads/2021/05/isolada-positivo.jpg" alt="Logo da Empresa" class="logo">
+            <div>
+                <div class="subtitle">Nº Nota: 00001</div>
+                <div class="subtitle">Série: 00001</div>
+            </div>
+            <div>
+                <div class="subtitle">27/02/2024</div>
+                <div class="subtitle">às 16:47</div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="info-box">
+                <div class="info-header">
+                    <div class="section-title">Dados do Emitente</div>
+                </div>
+                <p>Nome: Empresa Emitente</p>
+                <p>CNPJ: 00.000.000/0001-00</p>
+                <p>Endereço: Rua do Emitente, 123 - Bairro - Cidade/Estado - CEP: 12345-678</p>
+            </div>
+
+            <div class="info-box">
+                <div class="info-header">
+                    <div class="section-title">Dados do Destinatário</div>
+                </div>
+                <p>Nome: Cliente Destinatário</p>
+                <p>CPF/CNPJ: 00.000.000/0001-00</p>
+                <p>Endereço: Rua do Destinatário, 456 - Bairro - Cidade/Estado - CEP: 98765-432</p>
+            </div>
+
+            <div class="info-box">
+                <div class="info-header">
+                    <div class="section-title">Dados do Transportador</div>
+                </div>
+                <p>Nome: Transportadora XYZ</p>
+                <p>CNPJ: 00.000.000/0001-00</p>
+                <p>Placa do Veículo: XXX-1234</p>
+            </div>
+        </div>
+
+        <div class="content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Quantidade</th>
+                        <th>Preço Unitário</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Produto 1</td>
+                        <td>2</td>
+                        <td>R$ 50,00</td>
+                        <td>R$ 100,00</td>
+                    </tr>
+                    <tr>
+                        <td>Produto 2</td>
+                        <td>1</td>
+                        <td>R$ 30,00</td>
+                        <td>R$ 30,00</td>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="footer">
+            <p>Total: R$ 130,00</p>
+        </div>
+    </div>
+
+    <div class="center">
+        <button onclick="window.print()" class="print-button">Imprimir Página</button>
+    </div>
+    
+</body>
+</html>

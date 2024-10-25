@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="image/icons8-note-100.png" type="image/x-icon">
+        <title>Nota Fiscal</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    </head>
+<body>
+
+    <div class="container my-5 ">
+
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+              <button class="nav-link active fw-bold" data-bs-toggle="tab" data-bs-target="#nav-emitente" type="button" role="tab" aria-controls="nav-emitente" aria-selected="true">EMITENTE</button>
+              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#nav-destinatario" type="button" role="tab" aria-controls="nav-destinatario" aria-selected="false">DESTINATÁRIO</button>
+              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#nav-transporte" type="button" role="tab" aria-controls="nav-transporte" aria-selected="false">TRANSPORTE</button>
+              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#nav-produtos" type="button" role="tab" aria-controls="nav-produtos" aria-selected="false">PRODUTOS</button>
+            </div>
+        </nav>
+          <div class="tab-content" id="nav-tabContent">
+
+            <div class="tab-pane fade show active" id="nav-emitente" role="tabpanel" aria-labelledby="nav-emitente-tab" tabindex="0">
+
+                <form class="row g-3">
+
+
+                    <div class="row form-row">
+                        <div class="col-md-12">
+                            <label for="razaoSocialEmitente" class="form-label">Razão Social</label>
+                            <input type="text" class="form-control" id="razaoSocialEmitente">
+                        </div>
+                    </div>
+                    <div class="row form-row">
+                        <div class="col-md-4">
+                            <label for="cpfCNPJEmitente" class="form-label">CPF / CNPJ</label>
+                            <input type="text" class="form-control" id="cpfCNPJEmitente">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inscEstadualEmitente" class="form-label">Inscrição Estadual</label>
+                            <input type="text" class="form-control" id="inscEstadualEmitente">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="telefoneEmitente" class="form-label">Telefone</label>
+                            <input type="text" class="form-control" id="telefoneEmitente">
+                        </div>
+                    </div>
+
+                    
+
+
+                    <fieldset class="row">
+                        <div class="row form-row">
+                            <div class="col-md-12">
+                                <legend>Endereço</legend>
+                            </div>
+                        </div>
+
+                        <div class="row form-row">
+                            <div class="col-md-3">
+                                <label for="cepEmitente" class="form-label">CEP</label>
+                                <input type="text" class="form-control" id="cepEmitente" name="cepEmitente" maxlength="9">
+                            </div>
+                            <div class="col-md-7">
+                                <label for="ruaEmitente" class="form-label">Rua</label>
+                                <input type="text" class="form-control" id="ruaEmitente">
+                            </div>
+                            <div class="col-md-2">
+                                <label for="numeroEmitente" class="form-label">Nº</label>
+                                <input type="text" class="form-control" id="numeroEmitente">
+                            </div>
+                        </div>
+
+
+                        <div class="row form-row">
+                            <div class="col-md-4">
+                                <label for="bairroEmitente" class="form-label">Bairro</label>
+                                <input type="text" class="form-control" id="bairroEmitente">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="cidadeEmitente" class="form-label">Cidade</label>
+                                <input type="text" class="form-control" id="cidadeEmitente">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="estadoEmitente" class="form-label">Estado</label>
+                                <input type="text" class="form-control" id="estadoEmitente">
+                            </div>
+                        </div>
+                    </fieldset>
+
+
+                </form>
+            </div>
+            <div class="tab-pane fade" id="nav-destinatario" role="tabpanel" aria-labelledby="nav-destinatario-tab" tabindex="1">
+
+                <form class="row g-3">
+
+                    <div class="row form-row">
+                        <div class="col-md-12">
+                            <label for="razaoSocialDestinatario" class="form-label">Razão Social</label>
+                            <input type="text" class="form-control" id="razaoSocialDestinatario">
+                        </div>
+                    </div>
+                    <div class="row form-row">
+                        <div class="col-md-4">
+                            <label for="cpfCNPJDestinatario" class="form-label">CPF / CNPJ</label>
+                            <input type="text" class="form-control" id="cpfCNPJDestinatario">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inscEstadualDestinatario" class="form-label">Inscrição Estadual</label>
+                            <input type="text" class="form-control" id="inscEstadualDestinatario">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="telefoneDestinatario" class="form-label">Telefone</label>
+                            <input type="text" class="form-control" id="telefoneDestinatario">
+                        </div>
+                    </div>
+
+                    
+
+
+                    <fieldset class="row">
+                        <div class="row form-row">
+                            <div class="col-md-12">
+                                <legend>Endereço</legend>
+                            </div>
+                        </div>
+
+                        <div class="row form-row">
+                            <div class="col-md-3">
+                                <label for="cepDestinatario" class="form-label">CEP</label>
+                                <input type="text" class="form-control" id="cepDestinatario" name="cepDestinatario" maxlength="9">
+                            </div>
+                            <div class="col-md-7">
+                                <label for="ruaDestinatario" class="form-label">Rua</label>
+                                <input type="text" class="form-control" id="ruaDestinatario">
+                            </div>
+                            <div class="col-md-2">
+                                <label for="numeroDestinatario" class="form-label">Nº</label>
+                                <input type="text" class="form-control" id="numeroDestinatario">
+                            </div>
+                        </div>
+
+
+                        <div class="row form-row">
+                            <div class="col-md-4">
+                                <label for="bairroDestinatario" class="form-label">Bairro</label>
+                                <input type="text" class="form-control" id="bairroDestinatario">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="cidadeDestinatario" class="form-label">Cidade</label>
+                                <input type="text" class="form-control" id="cidadeDestinatario">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="estadoDestinatario" class="form-label">Estado</label>
+                                <input type="text" class="form-control" id="estadoDestinatario">
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+
+
+            </div>
+
+            <div class="tab-pane fade" id="nav-transporte" role="tabpanel" aria-labelledby="nav-transporte-tab" tabindex="2">
+
+
+                <form class="row g-3">
+
+                    <div class="row form-row">
+                        <div class="col-md-12">
+                            <label for="razaoSocialTransportador" class="form-label">Razão Social</label>
+                            <input type="text" class="form-control" id="razaoSocialTransportador">
+                        </div>
+                    </div>
+                    <div class="row form-row">
+                        <div class="col-md-4">
+                            <label for="cpfCNPJTransportador" class="form-label">CPF / CNPJ</label>
+                            <input type="text" class="form-control" id="cpfCNPJTransportador">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inscEstadualTransportador" class="form-label">Inscrição Estadual</label>
+                            <input type="text" class="form-control" id="inscEstadualTransportador">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="telefoneTransportador" class="form-label">Telefone</label>
+                            <input type="text" class="form-control" id="telefoneTransportador">
+                        </div>
+                    </div>
+                    <div class="row form-row">
+                        <div class="col-md-4">
+                            <label for="CNPJTransportador" class="form-label">Frete por conta</label>
+                            <select id="fretePorConta" class="form-select" aria-label="Default select example">
+                                <option value="0-Emitente" selected>Emitente</option>
+                                <option value="1-Destinatário ">Destinatário</option>
+                                <option value="2-Terceiros ">Terceiros</option>
+                                <option value="3-Correios ">Correios</option>
+                                <option value="4-Sem Frete ">Sem Frete</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="valorFreteTransporte" class="form-label">Valor do Frete</label>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">R$</span>
+                                <input type="text" class="form-control" id="valorFreteTransporte">
+                                <span class="input-group-text">,00</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="pesoBrutoTransporte" class="form-label">Peso Bruto</label>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" id="pesoBrutoTransporte">
+                                <span class="input-group-text">Kg</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+
+                    <fieldset class="row">
+                        <div class="row form-row">
+                            <div class="col-md-12">
+                                <legend>Endereço</legend>
+                            </div>
+                        </div>
+
+                        <div class="row form-row">
+                            <div class="col-md-3">
+                                <label for="cepTransportador" class="form-label">CEP</label>
+                                <input type="text" class="form-control" id="cepTransportador" name="cepTransportador" maxlength="9">
+                            </div>
+                            <div class="col-md-7">
+                                <label for="ruaTransportador" class="form-label">Rua</label>
+                                <input type="text" class="form-control" id="ruaTransportador">
+                            </div>
+                            <div class="col-md-2">
+                                <label for="numeroTransportador" class="form-label">Nº</label>
+                                <input type="text" class="form-control" id="numeroTransportador">
+                            </div>
+                        </div>
+
+
+                        <div class="row form-row">
+                            <div class="col-md-4">
+                                <label for="bairroTransportador" class="form-label">Bairro</label>
+                                <input type="text" class="form-control" id="bairroTransportador">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="cidadeTransportador" class="form-label">Cidade</label>
+                                <input type="text" class="form-control" id="cidadeTransportador">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="estadoTransportador" class="form-label">Estado</label>
+                                <input type="text" class="form-control" id="estadoTransportador">
+                            </div>
+                        </div>
+                    </fieldset>
+                    
+                </form>
+
+            </div>
+
+            <div class="tab-pane fade" id="nav-produtos" role="tabpanel" aria-labelledby="nav-produtos-tab" tabindex="3">
+
+                <form class="row g-3">
+
+                    <div class="row form-row">
+                        <div class="col-md-2">
+                            <label for="codigoProduto" class="form-label">Código</label>
+                            <input type="text" class="form-control" id="codigoProduto">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="descricaoProduto" class="form-label">Descrição</label>
+                            <input type="text" class="form-control" id="descricaoProduto">
+                        </div>
+                        <div class="col-md-2">
+                            <label for="quantidadeProduto" class="form-label">Quantia</label>
+                            <input type="text" class="form-control" id="quantidadeProduto">
+                        </div>
+                        <div class="col-md-2">
+                            <label for="valorProduto" class="form-label">Valor Unitário</label>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">R$</span>
+                                <input type="text" class="form-control" id="valorProduto">
+                                <span class="input-group-text">,00</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="descontoProduto" class="form-label">Desconto</label>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" id="descontoProduto">
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row form-row justify-content-start">
+                        <div class="col-md-4 d-flex justify-content-start">
+                            <button class="btn btn-primary" type="button" id="btnIncluirProduto">Adicionar Produto</button>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="row form-row px-3">
+                        
+                    <div class="col-md-12 table-col">
+                         <table class="table table-striped" id="table">
+                             <thead>
+                                 <tr>
+                                     <th scope="col">Item</th>
+                                     <th scope="col">Código</th>
+                                     <th scope="col">Descrição</th>
+                                     <th scope="col">Quantia</th>
+                                     <th scope="col">Valor</th>
+                                     <th scope="col">Desconto</th>
+                                     <th scope="col">Total</th>
+                                 </tr>
+                             </thead>
+                             <tbody id="inserirProdutos">
+                                 
+                             </tbody>
+                         </table>
+                    </div>
+
+                </div>
+
+                <div class="row form-row px-3">
+                        
+                    <div class="col-md-12 my-1 d-flex align-items-end justify-content-evenly">
+
+                        <div>
+                            <span class="mb-0 fw-medium">Frete:</span>
+                            <span class="mb-0 text-end">
+                                R$ <span id="entradaFrete" >0,00</span>
+                            </span>
+                        </div>
+
+                        <div>
+                            <span class="mb-0 fw-medium">Produtos:</span>
+                            <span class="mb-0 text-end">
+                                R$ <span id="entradaTotalProdutos">0,00</span>
+                            </span>
+                        </div>
+
+                        <div>
+                            <span class="mb-0 fw-medium">Desconto:</span>
+                            <span class="mb-0 text-end">
+                                R$ <span id="entradaDescontos">0,00</span>
+                            </span>
+                        </div>
+
+
+                        <div>
+                            <span class="mb-0 fw-medium">Nota Fiscal:</span>
+                            <span class="mb-0 text-end">
+                                R$ <span id="entradaTotalNota">0,00</span>
+                            </span>
+                        </div>
+                         
+                    </div>
+
+                </div>
+
+            </div>
+          </div>
+          <hr>
+        
+        <div class="danfe_container py-2">
+            
+            <div class="nota d-flex flex-column gap-2 w-10 px-3 border-right">
+                <span class="fw-semibold">Nota</span>
+                <span class="fw-medium" id="">001</span>
+            </div>
+            <div class="serie d-flex flex-column gap-2 w-10 px-3  border-right">
+                <span class="fw-semibold">Série</span>
+                <span class="fw-medium" id="">001</span>
+            </div>
+            <div class="data-hora-saida d-flex flex-column gap-2 w-100 px-3  border-right">
+                <span class="fw-semibold">Emitido em</span>
+                <span class="fw-medium" id="dateTime">11/09/2001 - 08h46</span>
+            </div>
+            <div class="data-hora-saida d-flex flex-column gap-2 w-100 px-3  border-right">
+                <img src="https://www1.sp.senac.br/hotsites/sites/guiavisual/wp-content/uploads/2021/05/isolada-positivo.jpg" alt="" width= 180px" height="140px">
+            </div>
+
+            <div class="nota d-flex flex-row gap-2 w-10 px-3 border-right">
+                <button class="btn btn-dark" id="btn-gerar-danfe" onclick="nf()">
+                    <i class=""></i>
+                    DANFE
+                </button>
+                <button class="btn btn-dark" id="btn-limpar-danfe">
+                    <i class=""></i>
+                    LIMPAR
+                </button>
+            </div>
+
+        </div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+
+        function nf(){
+            window.location.href ="notaFiscal.html";
+        }
+
+        function getCurrentDateTime() {
+        const now = new Date();
+        const day = String(now.getDate()).padStart(2, '0');
+        const month = String(now.getMonth() + 1).padStart(2, '0');
+        const year = now.getFullYear();
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        return `${day}/${month}/${year} - ${hours}h${minutes}`;
+    }
+
+        document.getElementById('dateTime').textContent = getCurrentDateTime();
+
+        document.getElementById("btn-limpar-danfe").addEventListener('click', () => {
+            document.querySelectorAll('input').forEach(input => input.value = '');
+            document.getElementById("inserirProdutos").innerHTML = '';
+            document.getElementById("entradaFrete").textContent = '0,00';
+            document.getElementById("entradaDescontos").textContent = '0,00';
+            document.getElementById("entradaTotalProdutos").textContent = '0,00';
+            document.getElementById("entradaTotalNota").textContent = '0,00';
+        });
+    
+        document.getElementById("btnIncluirProduto").addEventListener('click', (ev) => {
+            ev.preventDefault();
+    
+            const codigo = document.getElementById("codigoProduto");
+            const descricao = document.getElementById("descricaoProduto");
+            const quantidade = document.getElementById("quantidadeProduto");
+            const valorUnitario = document.getElementById("valorProduto");
+            let descontoProduto = document.getElementById("descontoProduto");
+    
+            if (codigo.value.trim() === '' || descricao.value.trim() === '' || quantidade.value.trim() === '' || valorUnitario.value.trim() === '') {
+                alert('Por favor, preencha todos os campos obrigatórios.');
+                return;
+            }
+    
+            const quantidadeNum = parseFloat(quantidade.value);
+            const valorUnitarioNum = parseFloat(valorUnitario.value);
+            const descontoNum = descontoProduto.value.trim() !== '' ? parseFloat(descontoProduto.value) : 0;
+    
+            const totalDescontoProduto = quantidadeNum * valorUnitarioNum * (descontoNum / 100);
+    
+            const totalProduto = quantidadeNum * valorUnitarioNum - totalDescontoProduto;
+    
+            preencherTabela(codigo.value, descricao.value, quantidadeNum, valorUnitarioNum, descontoNum, totalProduto);
+    
+            codigo.value = '';
+            descricao.value = '';
+            quantidade.value = '';
+            valorUnitario.value = '';
+            descontoProduto.value = '';
+    
+            codigo.focus();
+    
+            calcularTotais();
+        });
+
+        $('.nav-link').on('focus', function() {
+            $('.nav-link').removeClass('fw-bold');
+            $(this).addClass('fw-bold');
+        });
+    
+        function preencherTabela(codigo, descricao, quantidade, valorUnitario, desconto, total) {
+            const tableBody = document.getElementById("inserirProdutos");
+    
+            const newRow = tableBody.insertRow();
+    
+            const cellItem = newRow.insertCell();
+            cellItem.textContent = tableBody.rows.length;
+    
+            const cellCodigo = newRow.insertCell();
+            cellCodigo.textContent = codigo;
+    
+            const cellDescricao = newRow.insertCell();
+            cellDescricao.textContent = descricao;
+    
+            const cellQuantidade = newRow.insertCell();
+            cellQuantidade.textContent = quantidade;
+    
+            const cellValor = newRow.insertCell();
+            cellValor.textContent = valorUnitario.toFixed(2);
+    
+            const cellDesconto = newRow.insertCell();
+            cellDesconto.textContent = desconto.toFixed(2);
+    
+            const cellTotal = newRow.insertCell();
+            cellTotal.textContent = total.toFixed(2);
+        }
+    
+        function calcularTotais() {
+            const table = document.getElementById("table");
+            const rows = table.rows;
+            let totalProdutos = 0;
+    
+            for (let i = 1; i < rows.length; i++) {
+                const quantidade = parseFloat(rows[i].cells[3].textContent);
+                const valorUnitario = parseFloat(rows[i].cells[4].textContent);
+                totalProdutos += quantidade * valorUnitario;
+            }
+    
+            document.getElementById("entradaTotalProdutos").textContent = totalProdutos.toFixed(2);
+    
+            let totalDescontos = 0;
+            for (let i = 1; i < rows.length; i++) {
+                const quantidade = parseFloat(rows[i].cells[3].textContent);
+                const valorUnitario = parseFloat(rows[i].cells[4].textContent);
+                const desconto = parseFloat(rows[i].cells[5].textContent);
+                totalDescontos += quantidade * valorUnitario * (desconto / 100);
+            }
+    
+            document.getElementById("entradaDescontos").textContent = totalDescontos.toFixed(2);
+    
+            let totalNota = 0;
+            for (let i = 1; i < rows.length; i++) {
+                totalNota += parseFloat(rows[i].cells[6].textContent);
+            }
+    
+            document.getElementById("entradaTotalNota").textContent = totalNota.toFixed(2);
+        }
+
+
+        $(document).ready(function(){
+            $('#telefoneEmitente').mask('(00) 00000-0000');
+            $('#cepEmitente').mask('00000-000');
+            $('#cpfCNPJEmitente').mask('000.000.000-00', {reverse: true});
+
+            $('#telefoneDestinatario').mask('(00) 00000-0000');
+            $('#cepDestinatario').mask('00000-000');
+            $('#cpfCNPJDestinatario').mask('000.000.000-00', {reverse: true});
+
+            $('#telefoneTransportador').mask('(00) 00000-0000');
+            $('#cepTransportador').mask('00000-000');
+            $('#cpfCNPJTransportador').mask('000.000.000-00', {reverse: true});
+        });
+
+        $(document).ready(function(){
+        $('#cepEmitente').blur(function(){
+            var cep = $(this).val().replace(/\D/g, '');
+
+            $.getJSON('https://viacep.com.br/ws/'+ cep +'/json/', function(data){
+                if (!("erro" in data)) {
+                    $('#ruaEmitente').val(data.logradouro);
+                    $('#bairroEmitente').val(data.bairro);
+                    $('#cidadeEmitente').val(data.localidade);
+                    $('#estadoEmitente').val(data.uf);
+                } else {
+                    $('#ruaEmitente').val('');
+                    $('#bairroEmitente').val('');
+                    $('#cidadeEmitente').val('');
+                    $('#estadoEmitente').val('');
+                    alert('CEP não encontrado.');
+                }
+            });
+        });
+
+
+        $('#cepDestinatario').blur(function(){
+            var cep = $(this).val().replace(/\D/g, '');
+
+            $.getJSON('https://viacep.com.br/ws/'+ cep +'/json/', function(data){
+                if (!("erro" in data)) {
+                    $('#ruaDestinatario').val(data.logradouro);
+                    $('#bairroDestinatario').val(data.bairro);
+                    $('#cidadeDestinatario').val(data.localidade);
+                    $('#estadoDestinatario').val(data.uf);
+                } else {
+                    $('#ruaDestinatario').val('');
+                    $('#bairroDestinatario').val('');
+                    $('#cidadeDestinatario').val('');
+                    $('#estadoDestinatario').val('');
+                    alert('CEP não encontrado.');
+                }
+            });
+        });
+
+
+        $('#cepTransportador').blur(function(){
+            var cep = $(this).val().replace(/\D/g, '');
+
+            $.getJSON('https://viacep.com.br/ws/'+ cep +'/json/', function(data){
+                if (!("erro" in data)) {
+                    $('#ruaTransportador').val(data.logradouro);
+                    $('#bairroTransportador').val(data.bairro);
+                    $('#cidadeTransportador').val(data.localidade);
+                    $('#estadoTransportador').val(data.uf);
+                } else {
+                    $('#ruaTransportador').val('');
+                    $('#bairroTransportador').val('');
+                    $('#cidadeTransportador').val('');
+                    $('#estadoTransportador').val('');
+                    alert('CEP não encontrado.');
+                }
+            });
+        });
+    });
+
+
+
+    // Função para coletar dados do emitente e redirecionar para a página da nota fiscal
+function coletarDadosEmitente() {
+    // Objeto para armazenar os dados do emitente
+    var dadosEmitente = {};
+
+    // Pegar os valores dos campos do emitente
+    dadosEmitente.razaoSocialEmitente = document.getElementById('razaoSocialEmitente').value;
+    dadosEmitente.cpfCNPJEmitente = document.getElementById('cpfCNPJEmitente').value;
+    dadosEmitente.inscEstadualEmitente = document.getElementById('inscEstadualEmitente').value;
+    dadosEmitente.telefoneEmitente = document.getElementById('telefoneEmitente').value;
+    dadosEmitente.cepEmitente = document.getElementById('cepEmitente').value;
+    dadosEmitente.ruaEmitente = document.getElementById('ruaEmitente').value;
+    dadosEmitente.numeroEmitente = document.getElementById('numeroEmitente').value;
+    dadosEmitente.bairroEmitente = document.getElementById('bairroEmitente').value;
+    dadosEmitente.cidadeEmitente = document.getElementById('cidadeEmitente').value;
+    dadosEmitente.estadoEmitente = document.getElementById('estadoEmitente').value;
+
+    // Converter o objeto de dados do emitente para JSON
+    var dadosJSON = JSON.stringify(dadosEmitente);
+
+    // Redirecionar para a página da nota fiscal, passando os dados do emitente como parâmetro na URL
+    window.location.href = 'notaFiscal.html?dadosEmitente=' + encodeURIComponent(dadosJSON);
+}
+
+    </script>
+
+</body>
+</html>
