@@ -1,4 +1,4 @@
-# DANFE Generation System
+# Danfe Generation System
 
 This project was developed to support administration classes at Senac, providing an intuitive system for generating DANFEs. It allows essential information entry, making the invoice issuance process more straightforward.
 
