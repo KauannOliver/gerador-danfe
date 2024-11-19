@@ -1,28 +1,47 @@
-# Danfe Generation System
+# **DANFE Generation System**
 
-This project was developed to support administration classes at Senac, providing an intuitive system for generating DANFEs. It allows essential information entry, making the invoice issuance process more straightforward.
+This project was designed to assist administration classes at Senac by providing a streamlined system for generating DANFEs. It simplifies the invoice issuance process with an intuitive interface and automated features.
 
+---
 
-MAIN FEATURES
+## **MAIN FEATURES**
 
-1. The system allows complete entry of issuer and recipient data, such as company name, CNPJ/CPF, state registration, and address. Integrated with the Correios ZIP code API, it automatically fills in addresses for added efficiency.
+### 1. **Issuer and Recipient Data Entry**
+   - Users can enter essential details, including company name, CNPJ/CPF, state registration, and address.
+   - Integrated with the Correios ZIP code API to auto-fill address fields, enhancing efficiency and reducing errors.
 
-2. It includes transport details, such as carrier name, CNPJ, state registration, and freight. Users can assign freight responsibility, calculate total costs, and include product weight.
+### 2. **Transport Details**
+   - Captures transport information such as carrier name, CNPJ, state registration, and freight details.
+   - Allows assignment of freight responsibility, calculation of total transport costs, and inclusion of product weight.
 
-3. The product module allows items to be added to the DANFE, with fields for code, description, quantity, unit price, and discount. The system calculates the total for each item, applying any discounts.
+### 3. **Product Module**
+   - Enables users to add items to the DANFE, with fields for:
+     - Product code, description, quantity, unit price, and discount.
+   - Automatically calculates the total for each item, factoring in any applicable discounts.
 
-4. Using Bootstrap and jQuery, the system offers a responsive and user-friendly experience. Masking is applied to CNPJ, phone, and ZIP fields, reducing errors and improving data accuracy.
+### 4. **Responsive User Experience**
+   - Built with Bootstrap and jQuery for a user-friendly, responsive design.
+   - Field masking for CNPJ, phone, and ZIP code fields reduces errors and ensures accurate data input.
 
-5. Once filled, the system generates a complete DANFE for printing, organizing all information in an easily viewable layout, ready for use in fiscal documents.
+### 5. **DANFE Generation**
+   - Generates a complete, printable DANFE that organizes all entered information in a clear and accessible layout.
+   - Designed for use as a fiscal document, ready for immediate application.
 
+---
 
-TECHNOLOGIES USED
+## **TECHNOLOGIES USED**
 
-1. HTML and Bootstrap: Structure and responsive interface design.
-2. JavaScript and jQuery: Field automation and integration with the ZIP code API.
-3. JSON: Temporary storage and data handling for DANFE generation.
+### 1. **HTML and Bootstrap**
+   - Provides a structured, responsive interface for ease of use.
 
+### 2. **JavaScript and jQuery**
+   - Powers field automation and integration with the Correios ZIP code API.
 
-CONCLUSION
+### 3. **JSON**
+   - Used for temporary data storage and handling during DANFE generation.
 
-The DANFE generation system is a practical tool for administration classes, simplifying the creation of invoices and integrating issuer, recipient, transport, and product details into an accessible, printable format.
+---
+
+## **CONCLUSION**
+
+The **DANFE Generation System** is a valuable tool for teaching administrative processes, simplifying invoice creation with intuitive data entry and automation. By integrating issuer, recipient, transport, and product details into a printable format, the system ensures accuracy and efficiency, making it a practical solution for academic and professional use.
